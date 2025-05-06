@@ -219,51 +219,23 @@ body {
     background-color: transparent;
 }
 
-/* Download Header */
-.download-header {
-    padding: 8rem 5% 4rem;
-    text-align: left;
-    background: white;
-    margin-bottom: 2rem;
+/* Add arrow indicators */
+.dropdown > a::after {
+    content: '';
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    transition: transform 0.3s ease;
 }
 
-.download-header h1 {
-    font-size: 3.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.download-header h1::before,
-.download-header h1::after {
-    display: none;
-}
-
-.download-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    max-width: 1200px;
-    /* margin: 0; */
-}
-
-.download-nav-btn {
-    font-size: 1em;
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #f8f9fa;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.3s;
-    font-weight: 500;
-}
-
-.download-nav-btn:hover {
-    background: #007bff;
-    color: white;
-    transform: translateY(-2px);
+.dropdown:hover > a::after {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 /* Hero Section */
